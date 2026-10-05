@@ -1,6 +1,6 @@
 {
   "name": "character-frequency-analyzer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Counts the occurrence of each character in a text body for statistical and cryptographic analysis.",
   "type": "module",
   "main": "src/index.js",
