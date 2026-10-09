@@ -55,3 +55,10 @@ can sanity-check the shape of the input.
 - `caseInsensitive(ch)` — predicate, true for ASCII letters only
 - `lettersOnly(ch)` — predicate, true for ASCII + Latin-1 + Latin Extended-A letters
 - `CaseFolding` — frozen object `{ NONE, ASCII, FULL }`
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
